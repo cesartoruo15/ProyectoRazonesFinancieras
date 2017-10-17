@@ -1,0 +1,67 @@
+  <!-- Pagina de Periodos -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l6" id="model">
+        <div id="cajas" class="z-depth-1">
+          <h5 class="center">PRIMER PERIODO</h5>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <input type="text" id="fechaInicio" class="datepicker" name="datePickerInicio" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                    (input)="datePicker = $event.target.valueAsDate" [value]="'01/01/2015'" />
+                  <label id="labels" for="fechaInicio">Inicio</label>
+                </div>
+                <div class="input-field col s12 m12 l12">
+                  <input type="text" id="fechaFin" class="datepicker" name="datePickerFin" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                    (input)="datePicker = $event.target.valueAsDate" [value]="'31/12/2015'" />
+                  <label id="labels" for="fechaFin">Fin</label>
+                </div>
+                <div class="col s12 m12 l12">
+                  <p>
+                    <input type="checkbox" id="periodo1" />
+                    <label for="periodo1">Ver primer periodo</label>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m12 l6" id="model">
+        <div id="cajas" class="z-depth-1">
+          <h5 class="center">SEGUNDO PERIODO</h5>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12 m12 l12">
+                  <input type="text" id="fechaInicio2" class="datepicker" name="datePickerInicio2" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                    (input)="datePicker = $event.target.valueAsDate" [value]="'01/01/2016'" />
+                  <label id="labels" for="fechaInicio2">Inicio</label>
+                </div>
+                <div class="input-field col s12 m12 l12">
+                  <input type="text" id="fechaFin2" class="datepicker" name="datePickerFin2" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                    (input)="datePicker = $event.target.valueAsDate" [value]="'31/12/2016'" />
+                  <label id="labels" for="fechaFin2">Fin</label>
+                </div>
+                <div class="col s12 m12 l12">
+                  <p>
+                    <input type="checkbox" id="periodo2" />
+                    <label for="periodo2">Ver segundo periodo</label>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".button-collapse").sideNav();
+  });
+</script>
