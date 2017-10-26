@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div id="cajas2" class="z-depth-1">
-                <h5 class="center-align">Estado Financiero</h5>
+                <h5 class="center-align">Estado Financiero {{ verPeriodo1 }}</h5>
                 <p>Estados Financieros para el periodo de tiempo. </p>
                 <div class="row">
                     <h5>Estado de Resultados</h5>
@@ -11,15 +11,15 @@
                         <thead>
                             <tr>
                                 <th>Periodo</th>
-                                <th>Primer Periodo</th>
-                                <th>Segundo Periodo</th>
+                                <th *ngIf="(verPeriodo1)">Primer Periodo</th>
+                                <th *ngIf="(verPeriodo2)">Segundo Periodo</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Ventas</td>
-                                <td> 3445</td>
-                                <td> 3445</td>
+                                <td>1</td>
+                                <td>2</td>
                             </tr>
                             <tr>
                                 <td>Costo de Ventas</td>

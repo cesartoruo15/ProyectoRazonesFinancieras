@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MaterializeModule } from 'angular2-materialize';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import {FormBuilder, FormGroup, FormControl} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Componentes/home/home.component';
 import { NotasComponent } from './Componentes/notas/notas.component';
@@ -12,6 +13,7 @@ import { RLiquidezComponent } from './Componentes/rliquidez/rliquidez.component'
 import { REndeudamientoComponent } from './Componentes/rendeudamiento/rendeudamiento.component';
 import { RRentabilidadComponent } from './Componentes/rrentabilidad/rrentabilidad.component';
 import { RCoberturaComponent } from './Componentes/rcobertura/rcobertura.component';
+import  { Global }  from './global';
 
 const routes: Routes = [
   
@@ -42,7 +44,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [Global,FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,23 +4,25 @@
     <div class="row">
       <div class="col s12 m12 l6" id="model">
         <div id="cajas" class="z-depth-1">
-          <h5 class="center">PRIMER PERIODO</h5>
+          <h5 class="center">PRIMER PERIODO </h5>
           <div class="row">
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12 m12 l12">
                   <input type="text" id="fechaInicio" class="datepicker" name="datePickerInicio" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
-                    (input)="datePicker = $event.target.valueAsDate" [value]="'01/01/2015'" />
+                  (input)="datePicker = $event.target.valueAsDate" [value]="fechaInicioP1" [ngModel]="fechaInicioP1"
+                    (ngModelChange)="actualizarFechaInicioP1($event)"/>
                   <label id="labels" for="fechaInicio">Inicio</label>
                 </div>
                 <div class="input-field col s12 m12 l12">
                   <input type="text" id="fechaFin" class="datepicker" name="datePickerFin" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
-                    (input)="datePicker = $event.target.valueAsDate" [value]="'31/12/2015'" />
+                    (input)="datePicker = $event.target.valueAsDate" [value]="fechaFinP1" [ngModel]="fechaFinP1"
+                    (ngModelChange)="actualizarFechaFinP1($event)" />
                   <label id="labels" for="fechaFin">Fin</label>
                 </div>
                 <div class="col s12 m12 l12">
                   <p>
-                    <input type="checkbox" id="periodo1" checked="checked"/>
+                    <input type="checkbox" id="periodo1" [checked]="verPeriodo1" (change)="onCheckboxChangeP1()"/>
                     <label for="periodo1">Ver primer periodo</label>
                   </p>
                 </div>
@@ -38,17 +40,19 @@
               <div class="row">
                 <div class="input-field col s12 m12 l12">
                   <input type="text" id="fechaInicio2" class="datepicker" name="datePickerInicio2" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
-                    (input)="datePicker = $event.target.valueAsDate" [value]="'01/01/2016'" />
+                    (input)="datePicker = $event.target.valueAsDate" [value]="fechaInicioP2" [ngModel]="fechaInicioP2"
+                    (ngModelChange)="actualizarFechaInicioP2($event)" />
                   <label id="labels" for="fechaInicio2">Inicio</label>
                 </div>
                 <div class="input-field col s12 m12 l12">
                   <input type="text" id="fechaFin2" class="datepicker" name="datePickerFin2" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
-                    (input)="datePicker = $event.target.valueAsDate" [value]="'31/12/2016'" />
+                    (input)="datePicker = $event.target.valueAsDate" [value]="fechaFinP2" [ngModel]="fechaFinP2"
+                    (ngModelChange)="actualizarFechaFinP2($event)" />
                   <label id="labels" for="fechaFin2">Fin</label>
                 </div>
                 <div class="col s12 m12 l12">
                   <p>
-                    <input type="checkbox" id="periodo2" checked="checked"/>
+                    <input type="checkbox" id="periodo2" [checked]="verPeriodo2" (change)="onCheckboxChangeP2()"/>
                     <label for="periodo2">Ver segundo periodo</label>
                   </p>
                 </div>
