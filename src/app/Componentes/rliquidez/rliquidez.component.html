@@ -6,16 +6,16 @@
         <p>Las razones de liquidez se refieren a la facilidad con la que la empresa puede pagar sus cuentas. </p>
         <div class="card-panel ">
           <div class="row">
-            <table class="striped">
+            <table class="striped table-responsive">
               <thead>
                 <tr>
                   <div class="col s4">
                     <th>Periodo</th>
                   </div>
-                  <div class="col s4">
+                  <div class="col s4"  *ngIf="(verPeriodo1)">
                     <th>Primer Periodo</th>
                   </div>
-                  <div class="col s4">
+                  <div class="col s4" *ngIf="(verPeriodo2)">
                     <th>Segundo Periodo</th>
                   </div>
                 </tr>
@@ -26,43 +26,43 @@
         <div class="card-panel " id="color-rLiquidez">
           <div class="row">
             <div class="col s4">Capital neto de trabajo</div>
-            <div class="col s4">10.000</div>
-            <div class="col s4">13.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">10.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">13.000</div>
           </div>
         </div>
         <div class="card-panel ">
           <div class="row">
             <div class="col s4">Índice de solvencia</div>
-            <div class="col s4">10.000</div>
-            <div class="col s4">13.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">10.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">13.000</div>
           </div>
         </div>
         <div class="card-panel " id="color-rLiquidez">
           <div class="row">
             <div class="col s4">Prueba ácida</div>
-            <div class="col s4">10.000</div>
-            <div class="col s4">13.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">10.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">13.000</div>
           </div>
         </div>
         <div class="card-panel ">
           <div class="row">
             <div class="col s4">Rotación de Inventarios</div>
-            <div class="col s4">10.000</div>
-            <div class="col s4">13.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">10.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">13.000</div>
           </div>
         </div>
         <div class="card-panel " id="color-rLiquidez">
           <div class="row">
             <div class="col s4">Rotación de Cartera</div>
-            <div class="col s4">10.000</div>
-            <div class="col s4">13.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">10.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">13.000</div>
           </div>
         </div>
         <div class="card-panel ">
           <div class="row">
             <div class="col s4">Rotación de cuentas por pagar</div>
-            <div class="col s4">10.000</div>
-            <div class="col s4">13.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">10.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">13.000</div>
           </div>
         </div>
       </div>

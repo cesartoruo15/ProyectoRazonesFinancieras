@@ -10,6 +10,8 @@ export class Global {
     public fechaFinP1:string;
     public fechaInicioP2:string;
     public fechaFinP2:string;
+    //razon de liquidez
+    
 
     constructor(){
         this.nombre = "Te pille";

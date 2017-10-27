@@ -12,10 +12,10 @@
                   <div class="col s4">
                     <th>Periodo</th>
                   </div>
-                  <div class="col s4">
+                  <div class="col s4"  *ngIf="(verPeriodo1)">
                     <th>Primer Periodo</th>
                   </div>
-                  <div class="col s4">
+                  <div class="col s4" *ngIf="(verPeriodo2)">
                     <th>Segundo Periodo</th>
                   </div>
                 </tr>
@@ -26,15 +26,15 @@
         <div class="card-panel " id="color-rLiquidez">
           <div class="row">
             <div class="col s4">Razón de endeudamiento</div>
-            <div class="col s4">14.000</div>
-            <div class="col s4">6.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">14.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">6.000</div>
           </div>
         </div>
         <div class="card-panel ">
           <div class="row">
             <div class="col s4">Razón pasivo capital</div>
-            <div class="col s4">14.000</div>
-            <div class="col s4">6.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">14.000</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">6.000</div>
           </div>
         </div>
       </div>
