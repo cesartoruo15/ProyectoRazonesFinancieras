@@ -16,7 +16,6 @@ import  { Global }  from '../../global';
 })
 export class HomeComponent{ 
 
-  public nombre:string;
   public verPeriodo1:boolean;
   public verPeriodo2:boolean;
   public fechaInicioP1:string;
@@ -24,11 +23,7 @@ export class HomeComponent{
   public fechaInicioP2:string;
   public fechaFinP2:string;
 
-  fechaInicioP1DateActions = new EventEmitter<string|MaterializeAction>();
-  form: FormGroup;
-
   constructor( public global: Global){
-    let g_nombre = this.global.nombre;
     let g_verPeriodo1 = this.global.verPeriodo1;
     let g_verPeriodo2 = this.global.verPeriodo2;
 
@@ -37,7 +32,6 @@ export class HomeComponent{
     let g_fechaInicioP2 = this.global.fechaInicioP2;
     let g_fechaFinP2 = this.global.fechaFinP2;
 
-    this.nombre = g_nombre;
     this.verPeriodo1 = g_verPeriodo1;
     this.verPeriodo2 = g_verPeriodo2;
     
