@@ -7,14 +7,18 @@ export class Global {
     public fechaInicioP1:string;
     public fechaFinP1:string;
     public fechaInicioP2:string;
-    public fechaFinP2:string;    
+    public fechaFinP2:string; 
+    
+    public numeroPepe:number;
 
     constructor(){
         this.verPeriodo1 = true;
         this.verPeriodo2 = true;
-        this.fechaInicioP1 = "01/01/2015";
-        this.fechaFinP1 = "31/12/2015";
-        this.fechaInicioP2 = "01/01/2016";
-        this.fechaFinP2 = "31/12/2016";
+        this.fechaInicioP1 = "2015-01-01";
+        this.fechaFinP1 = "2015-12-31";
+        this.fechaInicioP2 = "2016-01-01";
+        this.fechaFinP2 = "2016-12-31";
+
+        this.numeroPepe = 1;
     }
 }

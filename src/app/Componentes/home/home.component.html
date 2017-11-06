@@ -9,13 +9,13 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12 m12 l12">
-                  <input type="text" id="fechaInicio" class="datepicker" name="datePickerInicio" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                  <input type="text" id="fechaInicio" class="datepicker" name="datePickerInicio" materialize="pickadate" [materializeParams]="[{ format: 'yyyy-mm-dd', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
                   (input)="datePicker = $event.target.valueAsDate" [value]="fechaInicioP1" [ngModel]="fechaInicioP1"
                     (ngModelChange)="actualizarFechaInicioP1($event)"/>
                   <label id="labels" for="fechaInicio">Inicio</label>
                 </div>
                 <div class="input-field col s12 m12 l12">
-                  <input type="text" id="fechaFin" class="datepicker" name="datePickerFin" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                  <input type="text" id="fechaFin" class="datepicker" name="datePickerFin" materialize="pickadate" [materializeParams]="[{ format: 'yyyy-mm-dd', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
                     (input)="datePicker = $event.target.valueAsDate" [value]="fechaFinP1" [ngModel]="fechaFinP1"
                     (ngModelChange)="actualizarFechaFinP1($event)" />
                   <label id="labels" for="fechaFin">Fin</label>
@@ -39,13 +39,13 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s12 m12 l12">
-                  <input type="text" id="fechaInicio2" class="datepicker" name="datePickerInicio2" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                  <input type="text" id="fechaInicio2" class="datepicker" name="datePickerInicio2" materialize="pickadate" [materializeParams]="[{ format: 'yyyy-mm-dd', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
                     (input)="datePicker = $event.target.valueAsDate" [value]="fechaInicioP2" [ngModel]="fechaInicioP2"
                     (ngModelChange)="actualizarFechaInicioP2($event)" />
                   <label id="labels" for="fechaInicio2">Inicio</label>
                 </div>
                 <div class="input-field col s12 m12 l12">
-                  <input type="text" id="fechaFin2" class="datepicker" name="datePickerFin2" materialize="pickadate" [materializeParams]="[{ format: 'dd/mm/yyyy', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
+                  <input type="text" id="fechaFin2" class="datepicker" name="datePickerFin2" materialize="pickadate" [materializeParams]="[{ format: 'yyyy-mm-dd', closeOnSelect: true, selectMonths: true, selectYears: 15 }]"
                     (input)="datePicker = $event.target.valueAsDate" [value]="fechaFinP2" [ngModel]="fechaFinP2"
                     (ngModelChange)="actualizarFechaFinP2($event)" />
                   <label id="labels" for="fechaFin2">Fin</label>

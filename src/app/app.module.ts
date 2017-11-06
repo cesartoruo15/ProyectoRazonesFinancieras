@@ -14,6 +14,8 @@ import { REndeudamientoComponent } from './Componentes/rendeudamiento/rendeudami
 import { RRentabilidadComponent } from './Componentes/rrentabilidad/rrentabilidad.component';
 import { RCoberturaComponent } from './Componentes/rcobertura/rcobertura.component';
 import  { Global }  from './global';
+import { EstadoFinancieroService } from './Servicios/estado-financiero.service';
+import { HttpModule } from '@angular/http';
 
 const routes: Routes = [
   
@@ -42,9 +44,10 @@ const routes: Routes = [
     BrowserModule,
     MaterializeModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [Global,FormBuilder],
+  providers: [Global,FormBuilder,EstadoFinancieroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
