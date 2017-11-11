@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import  { Global }  from '../../global';
-import { Inventario } from '../../Clases/test';
-import { EstadoFinancieroService } from '../../Servicios/estado-financiero.service';
+import { RazonesFinancierasService } from '../../Servicios/razones-financieras.service';
 
 @Component({
   selector: 'app-estado-financiero',
@@ -16,18 +15,12 @@ export class EstadoFinancieroComponent implements OnInit {
   public fechaInicioP1:string;
   public fechaFinP1:string;
 
-  public numeroDatos: number;
-
-  listado:Inventario[];
-  listado2:Inventario[];
-
-  listita;
-
-  aja;
+  public fechaInicioP2:string;
+  public fechaFinP2:string;
   
   //Variables de Muestra en la interfaz
 
-  constructor( public global: Global, private service:EstadoFinancieroService ) { 
+  constructor( public global: Global, private service:RazonesFinancierasService ) { 
     let g_verPeriodo1 = this.global.verPeriodo1;
     let g_verPeriodo2 = this.global.verPeriodo2;
     this.verPeriodo1 = g_verPeriodo1;
@@ -35,12 +28,13 @@ export class EstadoFinancieroComponent implements OnInit {
 
     let g_fechaInicioP1 = this.global.fechaInicioP1;
     let g_fechaFinP1 = this.global.fechaFinP1;
-
     this.fechaInicioP1 = g_fechaInicioP1;
     this.fechaFinP1 = g_fechaFinP1;
 
-    let g_numeroPepe = this.global.numeroPepe;
-    this.numeroDatos = g_numeroPepe;
+    let g_fechaInicioP2 = this.global.fechaInicioP2;
+    let g_fechaFinP2 = this.global.fechaFinP2;
+    this.fechaInicioP2 = g_fechaInicioP2;
+    this.fechaFinP2 = g_fechaFinP2;
 
     
   }
@@ -51,42 +45,50 @@ export class EstadoFinancieroComponent implements OnInit {
   }
 
   mostrarVariables() {
-    let variable;
+
     if(this.global.verPeriodo1){
-      
-      this.service.getInventario(this.fechaInicioP1,this.fechaFinP1).subscribe(
-        rs => this.listado = rs,
+      this.service.getVentas(this.fechaInicioP1,this.fechaFinP1).subscribe(
+        rs => {this.global.ventasP1 = rs[0].valor;},
         er =>console.log('Error: %s' , er),
         () => {
-          if(this.listado.length > 0 ){
-            this.listita = this.listado;
-            for (let obj of this.listado) {
-              this.aja = obj;
-              console.log("object:", obj);
-            }
-            
-            this.numeroDatos = Number(this.aja.pepe);
-            this.global.numeroPepe = Number(this.aja.pepe);
-            variable = Number(this.aja.pepe);
-            console.log("EL VALOR ES: "+(this.numeroDatos/2));
-            console.log("LA VARIABLE ES: "+variable);
-          }
         });
-        
-        console.log("LA VARIABLE FUERA ES: "+variable);
-        console.log("EL VALOR FUERA ES: "+this.global.numeroPepe);
+
+        this.service.getCostoVentas(this.fechaInicioP1,this.fechaFinP1).subscribe(
+          rs => {this.global.costoVentasP1 = rs[0].valor;},
+          er =>console.log('Error: %s' , er),
+          () => {
+            this.global.ut_antes_int_impP1 = (this.global.ventasP1-this.global.costoVentasP1-this.global.gastosFinancierosP1)/this.global.ventasP1;
+          });
+
+          this.service.getImpuestos(this.fechaInicioP1,this.fechaFinP1).subscribe(
+            rs => {this.global.impuestoP1 = rs[0].valor;},
+            er =>console.log('Error: %s' , er),
+            () => {
+              this.global.utilidadNetaP1 = (this.global.ventasP1 - this.global.costoVentasP1 - this.global.gastosFinancierosP1- this.global.impuestoP1-this.global.gastosOperacionP1)/this.global.ventasP1;
+            });
     }
     
       
     if(this.global.verPeriodo2){
-      this.service.getInventario(this.global.fechaInicioP2,this.global.fechaFinP2).subscribe(
-        rs => this.listado2 = rs,
+      this.service.getVentas(this.fechaInicioP2,this.fechaFinP2).subscribe(
+        rs => {this.global.ventasP2 = rs[0].valor;},
         er =>console.log('Error: %s' , er),
         () => {
-          if(this.listado2.length > 0 ){
+        });
 
-          }
-        })
+        this.service.getCostoVentas(this.fechaInicioP2,this.fechaFinP2).subscribe(
+          rs => {this.global.costoVentasP2 = rs[0].valor;},
+          er =>console.log('Error: %s' , er),
+          () => {
+            this.global.ut_antes_int_impP2 = (this.global.ventasP2-this.global.costoVentasP2-this.global.gastosFinancierosP2)/this.global.ventasP2;
+          });
+
+          this.service.getImpuestos(this.fechaInicioP2,this.fechaFinP2).subscribe(
+            rs => {this.global.impuestoP2 = rs[0].valor;},
+            er =>console.log('Error: %s' , er),
+            () => {
+              this.global.utilidadNetaP2 = (this.global.ventasP2 - this.global.costoVentasP2 - this.global.gastosFinancierosP2- this.global.impuestoP2-this.global.gastosOperacionP2)/this.global.ventasP2;
+            });
     }
   }
 
