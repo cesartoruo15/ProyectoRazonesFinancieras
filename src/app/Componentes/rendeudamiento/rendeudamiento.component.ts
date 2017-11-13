@@ -44,16 +44,12 @@ export class REndeudamientoComponent implements OnInit {
       let latest_date =this.datepipe.transform(this.date, 'yyyy-MM-dd');
       this.fechaActual = latest_date;
 
-      
-     
-
     if(this.global.verPeriodo1){
       console.log("FECHA ACTUAL: " +this.fechaActual);
       this.service.getInventario().subscribe(
         rs => {this.global.inventario = rs[0].valor;},
         er =>console.log('Error: %s' , er),
-        () => {
-        });
+        () => {});
 
       this.service.get_compras(this.fechaFinP1,this.fechaActual).subscribe(
         rs => {this.global.compras_finalP1 = rs[0].valor;},

@@ -7,9 +7,7 @@ export class Global {
     public fechaInicioP1:string;
     public fechaFinP1:string;
     public fechaInicioP2:string;
-    public fechaFinP2:string; 
-    
-    public numeroPepe:number;
+    public fechaFinP2:string;
 
     //Variables del Periodo I
     public ventasP1:number;
@@ -58,17 +56,21 @@ export class Global {
     public pasivoTotalP2:number;
     //Inventario
     public inventario:number;
-
+    public inventarioInicialP1:number;
+    public inventarioInicialP2:number;
     public inventarioFinalP1:number;
     public inventarioFinalP2:number;
     //Compras
     public compraP1:number;
     public compraP2:number;
-
+    public compras_inicialP1:number;
+    public compras_inicialP2:number;
     public compras_finalP1:number;
     public compras_finalP2:number;
     
     //Ventas
+    public costoVentas_inicialP1:number;
+    public costoVentas_inicialP2:number;
     public costoVentas_finalP1:number;
     public costoVentas_finalP2:number;
 
@@ -77,9 +79,18 @@ export class Global {
 
     public saldo_cxc_P1:number;
     public abono_cxc_P1:number;
-
     public saldo_cxc_P2:number;
     public abono_cxc_P2:number;
+
+    public saldo_cxc_PeriodoInicialP1:number;
+    public abono_cxc_PeriodoInicialP1:number;
+    public saldo_cxc_PeriodoInicialP2:number;
+    public abono_cxc_PeriodoInicialP2:number;
+
+    public saldo_cxc_PeriodoFinalP1:number;
+    public abono_cxc_PeriodoFinalP1:number;
+    public saldo_cxc_PeriodoFinalP2:number;
+    public abono_cxc_PeriodoFinalP2:number;
 
     public saldo_cxc_inicial_P1:number;
     public saldo_cxc_inicial_P2:number;
@@ -91,9 +102,18 @@ export class Global {
 
     public saldo_cxp_P1:number;
     public abono_cxp_P1:number;
-
     public saldo_cxp_P2:number;
     public abono_cxp_P2:number;
+
+    public saldo_cxp_PeriodoInicialP1:number;
+    public abono_cxp_PeriodoInicialP1:number;
+    public saldo_cxp_PeriodoInicialP2:number;
+    public abono_cxp_PeriodoInicialP2:number;
+
+    public saldo_cxp_PeriodoFinalP1:number;
+    public abono_cxp_PeriodoFinalP1:number;
+    public saldo_cxp_PeriodoFinalP2:number;
+    public abono_cxp_PeriodoFinalP2:number;
 
     public saldo_cxp_inicial_P1:number;
     public saldo_cxp_inicial_P2:number;
@@ -107,7 +127,18 @@ export class Global {
 
     //---Variables R---//
     //R Liquides
-
+    public capitalNetoP1:number;
+    public capitalNetoP2:number;
+    public indiceSolvenciaP1:number;
+    public indiceSolvenciaP2:number;
+    public pruebaAcidaP1:number;
+    public pruebaAcidaP2:number;
+    public rotacionInventarioP1:number;
+    public rotacionInventarioP2:number;
+    public rotacionCarteraP1:number;
+    public rotacionCarteraP2:number;
+    public rotacionCXP_P1:number;
+    public rotacionCXP_P2:number;
     //R Endeudamiento
     public razon_endeudamientoP1:number;
     public razon_endeudamientoP2:number;
@@ -143,7 +174,7 @@ export class Global {
         this.costoVentasP2 = 0;
         this.utilidadBrutaP2 = 0;
         this.gastosBrutoP2 = 0;
-        this.gastosOperacionP2 = 8500000;
+        this.gastosOperacionP2 = 8600000;
         this.ut_antes_int_impP2 = 0;
         this.gastosFinancierosP2 = 0;
         this.impuestoP2 = 0;
@@ -171,18 +202,22 @@ export class Global {
         this.pasivoTotalP2 = 0;
         //Inventario
         this.inventario = 0;
-
+        this.inventarioInicialP1 = 0;
+        this.inventarioInicialP2 = 0;
         this.inventarioFinalP1 = 0;
         this.inventarioFinalP2 = 0;
 
         //Compras
         this.compraP1 = 0;
         this.compraP2 = 0;
-
+        this.compras_inicialP1 = 0;
+        this.compras_inicialP2 = 0;
         this.compras_finalP1 = 0;
         this.compras_finalP2 = 0;
 
         //Ventas
+        this.costoVentas_inicialP1 = 0;
+        this.costoVentas_inicialP2 = 0;
         this.costoVentas_finalP1 = 0;
         this.costoVentas_finalP2 = 0;
 
@@ -191,9 +226,18 @@ export class Global {
     
         this.saldo_cxc_P1 = 0;
         this.abono_cxc_P1 = 0;
-    
         this.saldo_cxc_P2 = 0;
         this.abono_cxc_P2 = 0;
+
+        this.saldo_cxc_PeriodoInicialP1 = 0;
+        this.abono_cxc_PeriodoInicialP1 = 0;
+        this.saldo_cxc_PeriodoInicialP2 = 0;
+        this.abono_cxc_PeriodoInicialP2 = 0;
+
+        this.saldo_cxc_PeriodoFinalP1 = 0;
+        this.abono_cxc_PeriodoFinalP1 = 0;
+        this.saldo_cxc_PeriodoFinalP2 = 0;
+        this.abono_cxc_PeriodoFinalP2 = 0;
     
         this.saldo_cxc_inicial_P1 = 0;
         this.saldo_cxc_inicial_P2 = 0;
@@ -206,9 +250,18 @@ export class Global {
     
         this.saldo_cxp_P1 = 0;
         this.abono_cxp_P1 = 0;
-    
         this.saldo_cxp_P2 = 0;
         this.abono_cxp_P2 = 0;
+
+        this.saldo_cxp_PeriodoInicialP1 = 0;
+        this.abono_cxp_PeriodoInicialP1 = 0;
+        this.saldo_cxp_PeriodoInicialP2 = 0;
+        this.abono_cxp_PeriodoInicialP2 = 0;
+
+        this.saldo_cxp_PeriodoFinalP1 = 0;
+        this.abono_cxp_PeriodoFinalP1 = 0;
+        this.saldo_cxp_PeriodoFinalP2 = 0;
+        this.abono_cxp_PeriodoFinalP2 = 0;
     
         this.saldo_cxp_inicial_P1 = 0;
         this.saldo_cxp_inicial_P2 = 0;
@@ -216,12 +269,24 @@ export class Global {
         this.saldo_cxp_final_P1 = 0;
         this.saldo_cxp_final_P2 = 0;
 
+        //Patrimonio
         this.patrimonioP1 = 8000000;
         this.patrimonioP2 = 8000000;
 
         //---Variables R---//
         //R Liquides
-        
+        this.capitalNetoP1 = 0;
+        this.capitalNetoP2 = 0;
+        this.indiceSolvenciaP1 = 0;
+        this.indiceSolvenciaP2 = 0;
+        this.pruebaAcidaP1 = 0;
+        this.pruebaAcidaP2 = 0;
+        this.rotacionInventarioP1 = 0;
+        this.rotacionInventarioP2 = 0;
+        this.rotacionCarteraP1 = 0;
+        this.rotacionCarteraP2 = 0;
+        this.rotacionCXP_P1 = 0;
+        this.rotacionCXP_P2 = 0;
         //R Endeudamiento
         this.razon_endeudamientoP1 = 0;
         this.razon_endeudamientoP2 = 0;
