@@ -16,6 +16,7 @@ import { RCoberturaComponent } from './Componentes/rcobertura/rcobertura.compone
 import  { Global }  from './global';
 import { RazonesFinancierasService } from './Servicios/razones-financieras.service';
 import { HttpModule } from '@angular/http';
+import { DatePipe } from '@angular/common';
 
 const routes: Routes = [
   
@@ -47,7 +48,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [Global,FormBuilder,RazonesFinancierasService],
+  providers: [Global,FormBuilder,RazonesFinancierasService,DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

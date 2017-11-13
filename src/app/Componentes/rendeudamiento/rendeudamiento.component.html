@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div id="cajas2" class="z-depth-1">
-        <h5 class="center-align">Razones de Endeudamiento {{global.efectivoP1}}</h5>
+        <h5 class="center-align">Razones de Endeudamiento {{fechaActual}}</h5>
         <p>Las razones de endeudamiento indican el monto del dinero de otras personas que usa la empresa para generar utilidades. </p>
         <div class="card-panel ">
           <div class="row">
@@ -26,15 +26,15 @@
         <div class="card-panel " id="color-rLiquidez">
           <div class="row">
             <div class="col s4">Razón de endeudamiento</div>
-            <div class="col s4" *ngIf="(verPeriodo1)">14.000</div>
-            <div class="col s4" *ngIf="(verPeriodo2)">6.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">{{global.razon_endeudamientoP1}}</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">{{global.razon_endeudamientoP2}}</div>
           </div>
         </div>
         <div class="card-panel ">
           <div class="row">
             <div class="col s4">Razón pasivo capital</div>
-            <div class="col s4" *ngIf="(verPeriodo1)">14.000</div>
-            <div class="col s4" *ngIf="(verPeriodo2)">6.000</div>
+            <div class="col s4" *ngIf="(verPeriodo1)">{{global.razon_pasivoCapitaP1}}</div>
+            <div class="col s4" *ngIf="(verPeriodo2)">{{global.razon_pasivoCapitaP2}}</div>
           </div>
         </div>
       </div>

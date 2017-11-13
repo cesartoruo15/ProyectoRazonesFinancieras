@@ -64,6 +64,7 @@ export class EstadoFinancieroComponent implements OnInit {
             rs => {this.global.impuestoP1 = rs[0].valor;},
             er =>console.log('Error: %s' , er),
             () => {
+
               this.global.utilidadNetaP1 = (this.global.ventasP1 - this.global.costoVentasP1 - this.global.gastosFinancierosP1- this.global.impuestoP1-this.global.gastosOperacionP1)/this.global.ventasP1;
             });
     }
