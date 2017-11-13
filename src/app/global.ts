@@ -38,6 +38,17 @@ export class Global {
     //--------Variables Generales-----//
     //Acciones
     public acciones:number;
+
+    //Capital Contable
+    public capitalContableP1:number;
+    public capitalContableP2:number;
+    //Preferentes
+    public dividendosPreferentesP1:number;
+    public dividendosPreferentesP2:number;
+
+    public capitalPreferenteP1:number;
+    public capitalPreferenteP2:number;
+
     //Activo
     public activoCorrienteP1:number;
     public activoNoCorrienteP1:number;
@@ -73,6 +84,14 @@ export class Global {
     public costoVentas_inicialP2:number;
     public costoVentas_finalP1:number;
     public costoVentas_finalP2:number;
+
+    //Intereses
+    public interesesP1:number;
+    public interesesP2:number;
+
+    //Arrendamiento
+    public arrendamientoP1:number;
+    public arrendamientoP2:number;
 
     //Saldos CXC
     public saldo_cxc:number;
@@ -146,7 +165,31 @@ export class Global {
     public razon_pasivoCapitaP1:number;
     public razon_pasivoCapitaP2:number;
 
+    //R Rentabilidad
+    public margenBrutoUtilidadP1:number;
+    public margenBrutoUtilidadP2:number;
+    public margenUtilidadOperacionalP1:number;
+    public margenUtilidadOperacionalP2:number;
+    public margenNetoUtilidadP1:number;
+    public margenNetoUtilidadP2:number;
+    public rotacionActivosP1:number;
+    public rotacionActivosP2:number;
+    public rendimientoInversionP1:number;
+    public rendimientoInversionP2:number;
+    public rendimientoCapitalComunP1:number;
+    public rendimientoCapitalComunP2:number;
+    public utilidadXAccionP1:number;
+    public utilidadXAccionP2:number;
 
+    //R COBERTURA
+    public coverturaTotalPasivoP1:number;
+    public coverturaTotalPasivoP2:number;
+
+    public razonCoberturaTotalP1:number;
+    public razonCoberturaTotalP2:number;
+
+    public utilidadAntesImpP1:number;
+    public utilidadAntesImpP2:number;
 
     constructor(){
         this.verPeriodo1 = true;
@@ -184,6 +227,17 @@ export class Global {
         //Variables Generales
         //Acciones
         this.acciones = 100;
+
+        //Capital Contable
+        this.capitalContableP1 = 0;
+        this.capitalContableP2 = 0;
+         //Preferentes
+        this.dividendosPreferentesP1 = 0;
+        this.dividendosPreferentesP2 = 0;
+
+        this.capitalPreferenteP1 = 0;
+        this.capitalPreferenteP2 = 0;
+
         //activo
         this.activoCorrienteP1 = 0;
         this.activoNoCorrienteP1 = 11000000;
@@ -220,6 +274,14 @@ export class Global {
         this.costoVentas_inicialP2 = 0;
         this.costoVentas_finalP1 = 0;
         this.costoVentas_finalP2 = 0;
+
+         //Intereses
+        this.interesesP1 = 0;
+        this.interesesP2 = 0;
+
+        //Arrendamiento
+        this.arrendamientoP1 = 0;
+        this.arrendamientoP2 = 0;
 
         //Saldos CXC
         this.saldo_cxc = 0;
@@ -293,5 +355,30 @@ export class Global {
 
         this.razon_pasivoCapitaP1 = 0;
         this.razon_pasivoCapitaP2 = 0;
+        //R Rentabilidad
+        this.margenBrutoUtilidadP1 = 0;
+        this.margenBrutoUtilidadP2 = 0;
+        this.margenUtilidadOperacionalP1 = 0;
+        this.margenUtilidadOperacionalP2 = 0;
+        this.margenNetoUtilidadP1 = 0;
+        this.margenNetoUtilidadP2 = 0;
+        this.rotacionActivosP1 = 0;
+        this.rotacionActivosP2 = 0;
+        this.rendimientoInversionP1 = 0;
+        this.rendimientoInversionP2 = 0;
+        this.rendimientoCapitalComunP1 = 0;
+        this.rendimientoCapitalComunP2 = 0;
+        this.utilidadXAccionP1 = 0;
+        this.utilidadXAccionP2 = 0;
+
+         //R COBERTURA
+        this.coverturaTotalPasivoP1 = 0;
+        this.coverturaTotalPasivoP2 = 0;
+
+        this.razonCoberturaTotalP1 = 0;
+        this.razonCoberturaTotalP2 = 0;
+
+        this.utilidadAntesImpP1 = 0;
+        this.utilidadAntesImpP2 = 0;
     }
 }
